@@ -1,0 +1,19 @@
+.DetailCard {
+  height: 100vh;
+  display: block; /*docelowo "block" */
+  background-color: slateblue;
+}
+
+.DetailCard .header h3 {
+  margin: 0px;
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  background-color: tomato;
+  padding: 10px;
+}
+.DetailCard .closeButton {
+  width: 40px;
+  height: 40px;
+  float: right;
+}
