@@ -2,10 +2,13 @@ import React from "react";
 import SearchResult from "./SearchResult/SearchResult";
 
 const searchList = (props) => {
+  const maxSearchSize = 10; // limit of the search result size
+
   const filter = props.data
     .filter((item) => {
       return item.name.includes(props.input);
     })
+    .slice(0, maxSearchSize)
     .map((item) => {
       return (
         <SearchResult
@@ -15,7 +18,6 @@ const searchList = (props) => {
         />
       );
     });
-
   return <div>{filter}</div>;
 };
 
