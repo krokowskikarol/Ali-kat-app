@@ -6,10 +6,10 @@ import "./DetailCard.css";
 const detailCard = (props) => {
   return (
     <div className="DetailCard">
-      <Drawing />
+      <Drawing itemUrl={props.item.drawing} />
       <div className="header">
         <h3>
-          this is item: {props.name}
+          this is item: {props.item.name}
           <button className="closeButton" onClick={props.close}>
             <b>X</b>
           </button>

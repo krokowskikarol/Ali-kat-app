@@ -13,7 +13,7 @@ class App extends Component {
     this.state = {
       data: Data,
       input: "",
-      selectedItem: "",
+      selectedItem: {},
     };
   }
 
@@ -35,18 +35,12 @@ class App extends Component {
     });
   };
   render() {
-    console.log(this.state.data);
     if (this.state.data.length === 0) {
       this.setState({ data: Data });
     }
-    console.log(this.state);
 
     let searchBar = (
-      <SearchBar
-        input={this.state.input}
-        change={this.inputChangeHandler}
-        filterData={this.filfilterData}
-      />
+      <SearchBar input={this.state.input} change={this.inputChangeHandler} />
     );
     let view = (
       <div>
@@ -59,11 +53,12 @@ class App extends Component {
         />
       </div>
     );
-    if (this.state.selectedItem) {
+    if (this.state.selectedItem.name) {
       view = (
-        <DetailCard name={this.state.selectedItem} close={this.closeDetail} />
+        <DetailCard item={this.state.selectedItem} close={this.closeDetail} />
       );
     }
+    console.log(this.state);
 
     return <div className="App">{view}</div>;
   }

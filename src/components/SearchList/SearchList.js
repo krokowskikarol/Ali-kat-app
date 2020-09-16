@@ -14,7 +14,7 @@ const searchList = (props) => {
         <SearchResult
           name={item.name}
           key={item.name}
-          clicked={() => props.clicked(item.name)}
+          clicked={() => props.clicked(item)}
         />
       );
     });
