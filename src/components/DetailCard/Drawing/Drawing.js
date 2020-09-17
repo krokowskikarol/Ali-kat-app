@@ -4,10 +4,8 @@ import "./Drawing.css";
 const drawing = (props) => {
   return (
     <div className="Drawing">
-      <h1>this is Drawing</h1>
-      <p>{props.itemUrl}</p>
+      <img src={require("../../../" + props.path)} alt={props.path} />
     </div>
   );
 };
-
 export default drawing;

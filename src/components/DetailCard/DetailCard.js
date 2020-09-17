@@ -4,12 +4,13 @@ import FeatureList from "./FeatureList/FeatureList";
 import "./DetailCard.css";
 
 const detailCard = (props) => {
+  const imgUrl = props.item.mainImg + props.item.index + ".png";
   return (
     <div className="DetailCard">
-      <Drawing itemUrl={props.item.drawing} />
+      <Drawing path={imgUrl} />
       <div className="header">
         <h3>
-          this is item: {props.item.name}
+          this is item: {props.item.index}
           <button className="closeButton" onClick={props.close}>
             <b>X</b>
           </button>

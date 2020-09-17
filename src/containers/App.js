@@ -53,7 +53,7 @@ class App extends Component {
         />
       </div>
     );
-    if (this.state.selectedItem.name) {
+    if (this.state.selectedItem.index !== undefined) {
       view = (
         <DetailCard item={this.state.selectedItem} close={this.closeDetail} />
       );

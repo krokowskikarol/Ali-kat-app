@@ -3,3 +3,7 @@
   background-color: teal;
   border: 2px solid black;
 }
+.Drawing img {
+  height: 100%;
+  border: 2px solid red;
+}

@@ -6,14 +6,15 @@ const searchList = (props) => {
 
   const filter = props.data
     .filter((item) => {
-      return item.name.includes(props.input);
+      return item.index.includes(props.input);
     })
     .slice(0, maxSearchSize)
     .map((item) => {
       return (
         <SearchResult
-          name={item.name}
-          key={item.name}
+          index={item.index}
+          key={item.index}
+          path={item.mainImg}
           clicked={() => props.clicked(item)}
         />
       );
