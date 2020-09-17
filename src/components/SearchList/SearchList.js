@@ -14,7 +14,7 @@ const searchList = (props) => {
         <SearchResult
           index={item.index}
           key={item.index}
-          path={item.mainImg}
+          path={item.mainImg + item.index + ".png"}
           clicked={() => props.clicked(item)}
         />
       );
