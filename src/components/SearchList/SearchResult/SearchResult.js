@@ -1,13 +1,10 @@
 import React from "react";
-
+import "./SearchResult.css";
 const searchResult = (props) => {
   return (
-    <div>
-      <p onClick={props.clicked}>this is Search Result of name {props.index}</p>
-      <img
-        style={{ height: "100px" }}
-        src={require("../../../" + props.path)}
-      />
+    <div className="SearchResult" onClick={props.clicked}>
+      <img src={require("../../../" + props.path)} alt="" />
+      <h2> {props.index}</h2>
     </div>
   );
 };

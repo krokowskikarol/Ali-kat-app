@@ -4,7 +4,7 @@ import SearchResult from "./SearchResult/SearchResult";
 const searchList = (props) => {
   const maxSearchSize = 10; // limit of the search result size
 
-  const filter = props.data
+  const filtered = props.data
     .filter((item) => {
       return item.index.includes(props.input);
     })
@@ -19,7 +19,7 @@ const searchList = (props) => {
         />
       );
     });
-  return <div>{filter}</div>;
+  return <div>{filtered}</div>;
 };
 
 export default searchList;

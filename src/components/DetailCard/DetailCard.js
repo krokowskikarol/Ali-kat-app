@@ -9,12 +9,10 @@ const detailCard = (props) => {
     <div className="DetailCard">
       <Drawing path={imgUrl} />
       <div className="header">
-        <h3>
-          this is item: {props.item.index}
-          <button className="closeButton" onClick={props.close}>
-            <b>X</b>
-          </button>
-        </h3>
+        <h2>{props.item.index}</h2>
+        <button className="closeButton" onClick={props.close}>
+          <b>X</b>
+        </button>
       </div>
 
       <FeatureList features={["zagniatanie", "przekładki"]} />
