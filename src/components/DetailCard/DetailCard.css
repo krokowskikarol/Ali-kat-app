@@ -1,6 +1,6 @@
 .DetailCard {
   margin: auto;
-  height: 15cm; /*height: 100vh*/
+  height: 100vh; /*height: 15CM*/
   width: 6.5cm;
   display: block; /*docelowo "block" */
   background-color: #333;
