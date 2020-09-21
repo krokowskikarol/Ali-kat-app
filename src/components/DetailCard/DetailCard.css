@@ -22,3 +22,8 @@
   margin: auto 0 auto auto;
   font-size: 2em; /*do zastąpenia obrazkiem/ikona */
 }
+@media (min-width: 801px) {
+  .DetailCard {
+    width: 40%;
+  }
+}

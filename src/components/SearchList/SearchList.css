@@ -1,0 +1,9 @@
+.SearchList {
+  width: 80%;
+  margin: auto;
+}
+@media (min-width: 801px) {
+  .SearchList {
+    width: 40%;
+  }
+}

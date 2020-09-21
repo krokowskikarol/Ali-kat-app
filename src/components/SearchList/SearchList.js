@@ -1,6 +1,6 @@
 import React from "react";
 import SearchResult from "./SearchResult/SearchResult";
-
+import "./SearchList.css";
 const searchList = (props) => {
   const maxSearchSize = 10; // limit of the search result size
 
@@ -19,7 +19,7 @@ const searchList = (props) => {
         />
       );
     });
-  return <div>{filtered}</div>;
+  return <div className="SearchList">{filtered}</div>;
 };
 
 export default searchList;
