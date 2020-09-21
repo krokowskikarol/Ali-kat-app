@@ -15,7 +15,7 @@ const detailCard = (props) => {
         </button>
       </div>
 
-      <FeatureList features={["zagniatanie", "przekładki"]} />
+      <FeatureList features={["zagniatanie-", "przekładki"]} />
     </div>
   );
 };
