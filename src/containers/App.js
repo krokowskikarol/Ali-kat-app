@@ -44,7 +44,7 @@ class App extends Component {
     );
     let view = (
       <div>
-        <h1>AliKat mobile Catalog</h1>
+        <h1>Katalog profili</h1>
         {searchBar}
         <SearchList
           data={this.state.data}

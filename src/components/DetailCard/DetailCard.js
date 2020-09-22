@@ -2,6 +2,7 @@ import React from "react";
 import Drawing from "./Drawing/Drawing";
 import FeatureList from "./FeatureList/FeatureList";
 import "./DetailCard.css";
+import backIcon from "./arrow_back_icon.png";
 
 const detailCard = (props) => {
   const imgUrl = props.item.mainImg + props.item.index + ".png";
@@ -9,13 +10,18 @@ const detailCard = (props) => {
     <div className="DetailCard">
       <Drawing path={imgUrl} />
       <div className="header">
-        <h2>{props.item.index}</h2>
-        <button className="closeButton" onClick={props.close}>
-          <b>X</b>
-        </button>
+        <div className="name">
+          <b>{props.item.index}</b>
+        </div>
+        <img
+          className="closeButton"
+          onClick={props.close}
+          src={backIcon}
+          alt="Back"
+        />
       </div>
 
-      <FeatureList features={["zagniatanie-", "przekładki"]} />
+      {/* <FeatureList features={["zagniatanie-", "przekładki"]} />   */}
     </div>
   );
 };

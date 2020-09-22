@@ -18,3 +18,8 @@
   margin: 0 40px 0 auto;
   color: #eee;
 }
+.SearchResult:hover {
+  width: 65%;
+  height: 110px;
+  background-color: #999;
+}

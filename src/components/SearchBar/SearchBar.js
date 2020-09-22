@@ -7,6 +7,7 @@ const searchBar = (props) => {
       type="text"
       onChange={props.change}
       value={props.input}
+      placeholder="szukaj"
     />
   );
 };
