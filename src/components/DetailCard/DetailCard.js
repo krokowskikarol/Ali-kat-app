@@ -8,7 +8,13 @@ const detailCard = (props) => {
   const imgUrl = "images/" + props.item.index + ".png";
   return (
     <div className="DetailCard">
-      <Drawing path={imgUrl} />
+      <Drawing
+        rotateImg={props.rotateImg}
+        angle={props.rotation}
+        flipImg={props.flipImg}
+        flipped={props.flipped}
+        path={imgUrl}
+      />
 
       <div className="header">
         <div className="name">
