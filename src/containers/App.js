@@ -15,7 +15,7 @@ class App extends Component {
       input: "",
       selectedItem: {},
       imgRotation: 0,
-      imgFlip: true,
+      imgFlip: false,
     };
   }
 
@@ -58,6 +58,8 @@ class App extends Component {
   closeDetail = () => {
     this.setState({
       selectedItem: "",
+      imgRotation: 0,
+      imgFlip: false,
     });
   };
   render() {

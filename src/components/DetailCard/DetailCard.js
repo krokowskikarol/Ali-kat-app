@@ -5,7 +5,7 @@ import "./DetailCard.css";
 import backIcon from "./arrow_back_icon.png";
 
 const detailCard = (props) => {
-  const imgUrl = "images/" + props.item.index + ".png";
+  const imgUrl = "images/" + props.item.index + ".png"; //image folder + name + .*
   return (
     <div className="DetailCard">
       <Drawing

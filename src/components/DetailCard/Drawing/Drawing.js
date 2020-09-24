@@ -1,21 +1,39 @@
 import React from "react";
 import "./Drawing.css";
-
+import rotateIcon from "./rotate-option.svg";
+import flipIcon from "./flip-object.svg";
 const drawing = (props) => {
-  const style = ["image", "rotate" + props.angle];
-  if (props.flipped) {
-    style.push("flipped");
-  }
+  const style = [
+    "image",
+
+    props.flipped ? "flipped" + props.angle : null,
+
+    "rotate" + props.angle,
+  ];
+  console.log(style);
+  // if (props.flipped) {
+  //   style.push("flipped");
+  // }
+  const buttons = (
+    <div id="buttons">
+      <div className="buttons" onClick={props.flipImg}>
+        <img src={flipIcon} alt="flip" />
+      </div>
+      {!props.flipped ? (
+        <div className="buttons" onClick={props.rotateImg}>
+          <img src={rotateIcon} alt="rotate" />
+        </div>
+      ) : null}
+    </div>
+  );
   return (
     <div>
-      <p>{style}</p>
       <img
         className={style.join(" ")}
         src={require("../../../" + props.path)}
         alt={props.path}
       />
-      <button onClick={props.rotateImg}>rotate</button>
-      <button onClick={props.flipImg}>flip</button>
+      {buttons}
     </div>
   );
 };
