@@ -4,7 +4,11 @@ import "./Drawing.css";
 const drawing = (props) => {
   return (
     <div className="Drawing">
-      <img src={require("../../../" + props.path)} alt={props.path} />
+      <img
+        className="image"
+        src={require("../../../" + props.path)}
+        alt={props.path}
+      />
     </div>
   );
 };

@@ -5,10 +5,11 @@ import "./DetailCard.css";
 import backIcon from "./arrow_back_icon.png";
 
 const detailCard = (props) => {
-  const imgUrl = props.item.mainImg + props.item.index + ".png";
+  const imgUrl = "images/" + props.item.index + ".png";
   return (
     <div className="DetailCard">
       <Drawing path={imgUrl} />
+
       <div className="header">
         <div className="name">
           <b>{props.item.index}</b>
