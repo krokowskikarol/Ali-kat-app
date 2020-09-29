@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Katalogi",
+  "name": "Wszystkie katalogi w jednym miejscu",
   "icons": [
     {
       "src": "favicon.ico",
