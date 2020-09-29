@@ -6,28 +6,24 @@ const drawing = (props) => {
   const style = [
     "image",
 
-    props.flipped ? "flipped" + props.angle : null,
-
-    "rotate" + props.angle,
+    props.flipped ? "flipped" + props.angle : "rotate" + props.angle,
   ];
+
   console.log(style);
-  // if (props.flipped) {
-  //   style.push("flipped");
-  // }
+
   const buttons = (
     <div id="buttons">
       <div className="buttons" onClick={props.flipImg}>
         <img src={flipIcon} alt="flip" />
       </div>
-      {!props.flipped ? (
-        <div className="buttons" onClick={props.rotateImg}>
-          <img src={rotateIcon} alt="rotate" />
-        </div>
-      ) : null}
+
+      <div className="buttons" onClick={props.rotateImg}>
+        <img src={rotateIcon} alt="rotate" />
+      </div>
     </div>
   );
   return (
-    <div>
+    <div id="container">
       <img
         className={style.join(" ")}
         src={require("../../../" + props.path)}

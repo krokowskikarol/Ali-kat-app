@@ -3,7 +3,7 @@ import "./SearchResult.css";
 const searchResult = (props) => {
   return (
     <div className="SearchResult" onClick={props.clicked}>
-      <img src={require("../../../" + props.path)} alt="x" />
+      <img className="image" src={require("../../../" + props.path)} alt="x" />
       <h2> {props.index}</h2>
     </div>
   );

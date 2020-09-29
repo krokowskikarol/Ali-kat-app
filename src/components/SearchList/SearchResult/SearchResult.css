@@ -9,10 +9,12 @@
   border-radius: 20px;
   box-shadow: #555 2px 3px;
 }
-.SearchResult img {
+.SearchResult .image {
   height: 100px;
+  width: 100px;
   margin: 0 auto 0 10px;
   border-radius: 20px;
+  pointer-events: none;
 }
 .SearchResult h2 {
   margin: 0 40px 0 auto;
