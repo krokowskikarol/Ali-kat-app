@@ -5,7 +5,9 @@
   background-color: #ddd;
   border-radius: 10px;
 }
-
+.SearchBar:focus {
+  outline: none;
+}
 @media (min-width: 801px) {
   .SearchBar {
     width: 40%;
