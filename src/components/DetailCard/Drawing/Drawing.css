@@ -7,11 +7,11 @@
 #container {
 }
 #buttons {
-  opacity: 0.85;
+  opacity: 0.75;
   position: absolute;
   display: block;
   top: 0px;
-  background-color: #999;
+  background-color: rgba(153, 153, 153, 0.5);
 }
 .buttons {
   height: 30px;
@@ -20,7 +20,7 @@
   padding: 10px;
 }
 .buttons:hover {
-  background-color: #ccc;
+  background-color: #aaa;
   width: 35px;
   height: 35px;
 }
@@ -28,6 +28,8 @@
   width: 100%;
   pointer-events: none;
 }
+
+/*rotation and flip classes*/
 .rotate90 {
   transform: rotate(90deg);
 }
