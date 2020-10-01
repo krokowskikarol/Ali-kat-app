@@ -19,10 +19,9 @@ class App extends Component {
     };
   }
 
-  //create json from files from file nemes
+  //create json from file nemes //
   createJSONFromFileNames = () => {
-    const list =
-      " RS030.png   VG1518.png  VG1619.png  VG537.png  VG660.png  VL484.png    RS031.png   VG1519.png  VG2600.png  VG539.png  VL479.png  VL485.png UG553.png   VG1611.png  VG2601.png  VG552.png  VL480.png  VL486.png    VG054.png   VG1612.png  VG2602.png  VG554.png  VL481.png  VL487.png    VG1515.png  VG1613.png  VG535.png   VG565.png  VL482.png  VL488.png    VG1517.png  VG1618.png  VG536.png   VG566.png  VL483.png  VL489.png";
+    const list = ""; // paste file name from /GIT Bash ls/ git used for easier formating
     const parsed = list
       .split(" ")
       .filter((item) => {
@@ -64,10 +63,10 @@ class App extends Component {
     });
   };
   render() {
-    console.log(
-      "///////////////////////////////////////////////////////////////////////////////////////////"
-    );
-    console.log(this.createJSONFromFileNames());
+    // console.log(
+    //   "//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
+    // );
+    // console.log(this.createJSONFromFileNames());
 
     // if (this.state.data.length === 0) {
     //   this.setState({ data: Data });
