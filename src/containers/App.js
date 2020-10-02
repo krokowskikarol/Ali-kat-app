@@ -19,28 +19,10 @@ class App extends Component {
     };
   }
 
-  //create json from file nemes //
-  createJSONFromFileNames = () => {
-    const list = ""; // paste file name from /GIT Bash ls/ git used for easier formating
-    const parsed = list
-      .split(" ")
-      .filter((item) => {
-        return item.length > 0;
-      })
-      .map((e) => {
-        return { index: e.slice(0, -4), features: [] };
-      });
-    const result = JSON.stringify(parsed, null, 2);
-    return result;
-  };
-  //--------------------------------------------------------------------
-
   inputChangeHandler = (event) => {
     this.setState({
       input: event.target.value.toUpperCase(),
     });
-
-    console.log(this.state.input);
   };
   rotateImg = () => {
     const currentRotation = this.state.imgRotation;
@@ -63,15 +45,6 @@ class App extends Component {
     });
   };
   render() {
-    // console.log(
-    //   "//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////"
-    // );
-    // console.log(this.createJSONFromFileNames());
-
-    // if (this.state.data.length === 0) {
-    //   this.setState({ data: Data });
-    // }
-
     let searchBar = (
       <SearchBar input={this.state.input} change={this.inputChangeHandler} />
     );
