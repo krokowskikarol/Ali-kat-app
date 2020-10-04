@@ -8,13 +8,12 @@ const searchList = (props) => {
     .filter((item) => {
       return item.index.includes(props.input);
     })
-    .slice(0)
+
     .map((item) => {
       return (
         <SearchResult
           index={item.index}
           key={item.index}
-          path={"images/150/" + item.index + ".jpg"}
           clicked={() => props.clicked(item)}
         />
       );
