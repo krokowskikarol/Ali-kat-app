@@ -1,11 +1,15 @@
 import React from "react";
 import "./SearchResult.css";
 const searchResult = (props) => {
-  const url = require("../../../images/150/" + props.index + ".jpg");
+  //const url = require("../../../../../katImages/150/" + props.index + ".jpg");// for local images
+  let imageUrl =
+    "https://raw.githubusercontent.com/krokowskikarol/appData/master/katImages/150/" +
+    props.index +
+    ".jpg";
 
   return (
     <div className="SearchResult" onClick={props.clicked}>
-      <img className="image" src={url} alt="x" />
+      <img className="image" src={imageUrl} alt="x" />
       <h2> {props.index}</h2>
     </div>
   );

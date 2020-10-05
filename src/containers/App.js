@@ -3,7 +3,7 @@ import DetailCard from "../components/DetailCard/DetailCard";
 import SearchList from "../components/SearchList/SearchList";
 import SearchBar from "../components/SearchBar/SearchBar";
 
-import Data from "./data.json";
+//import Data from "./data.json";
 import "./App.css";
 
 class App extends Component {
@@ -11,14 +11,29 @@ class App extends Component {
     super(props);
     console.log("data is loaded");
     this.state = {
-      data: Data,
+      data: [],
+      isDataLoaded: false,
       input: "",
       selectedItem: {},
       imgRotation: 0,
       imgFlip: false,
     };
   }
-
+  componentDidMount() {
+    fetch(
+      "https://raw.githubusercontent.com/krokowskikarol/appData/master/data.json"
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        this.setState({
+          data: data,
+          isDataLoaded: true,
+        });
+        // console.log(this.state);
+      });
+  }
   inputChangeHandler = (event) => {
     this.setState({
       input: event.target.value.toUpperCase(),
@@ -51,18 +66,26 @@ class App extends Component {
     let view = (
       <div>
         <h1>Katalog profili</h1>
-        <p>dodanych elementów: {this.state.data.length}</p>
-        {searchBar}
-        <section id="info">
-          <p>Aby rozpocząć podaj indeks szukanego elementu.</p>
-          <p>
-            Jeżeli poszukiwanym elementem jest połowka np: <b>XIP010A</b> nalezy
-            podać indeks pełnego profilu tj. <b>IP010</b> lub np. <b>IP030</b> a
-            nastepnie sprawdzić oznaczenia połówek.
-          </p>
-        </section>
+        <p>loading data</p>
       </div>
     );
+    if (this.state.isDataLoaded) {
+      view = (
+        <div>
+          <h1>Katalog profili</h1>
+          <p>dodanych elementów: {this.state.data.length}</p>
+          {searchBar}
+          <section id="info">
+            <p>Aby rozpocząć podaj indeks szukanego elementu.</p>
+            <p>
+              Jeżeli poszukiwanym elementem jest połowka np: <b>XIP010A</b>{" "}
+              nalezy podać indeks pełnego profilu tj. <b>IP010</b> lub np.{" "}
+              <b>IP030</b> a nastepnie sprawdzić oznaczenia połówek.
+            </p>
+          </section>
+        </div>
+      );
+    }
     if (this.state.input !== "") {
       view = (
         <div>

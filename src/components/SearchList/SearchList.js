@@ -4,11 +4,11 @@ import "./SearchList.css";
 const searchList = (props) => {
   //const maxSearchSize = 15; // limit of the search result size
 
-  const filteredList = props.data
+  let filteredList = props.data
     .filter((item) => {
       return item.index.includes(props.input);
     })
-
+    .sort()
     .map((item) => {
       return (
         <SearchResult
@@ -18,6 +18,7 @@ const searchList = (props) => {
         />
       );
     });
+
   return (
     <div className="SearchList">
       <p>wyswietlono {filteredList.length} elementy</p>

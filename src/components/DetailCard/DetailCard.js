@@ -5,15 +5,14 @@ import "./DetailCard.css";
 import backIcon from "./arrow_back_icon.png";
 
 const detailCard = (props) => {
-  const imgUrl = "images/" + props.item.index + ".png"; //image folder + name + .*
   return (
     <div className="DetailCard">
       <Drawing
         rotateImg={props.rotateImg}
-        angle={props.rotation}
+        rotationAngle={props.rotation}
         flipImg={props.flipImg}
         flipped={props.flipped}
-        path={imgUrl}
+        index={props.item.index}
       />
 
       <div className="header">

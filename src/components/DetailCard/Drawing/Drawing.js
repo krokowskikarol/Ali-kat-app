@@ -6,11 +6,18 @@ const drawing = (props) => {
   const style = [
     "image",
 
-    props.flipped ? "flipped" + props.angle : "rotate" + props.angle,
+    props.flipped
+      ? "flipped" + props.rotationAngle
+      : "rotate" + props.rotationAngle,
   ];
 
   console.log(style);
 
+  //const imgUrl = require("../../../../../katImages/" + props.index + ".png"); // for local files
+  const imageUrl =
+    "https://raw.githubusercontent.com/krokowskikarol/appData/master/katImages/" +
+    props.index +
+    ".png";
   const buttons = (
     <div id="buttons">
       <div className="buttons" onClick={props.flipImg}>
@@ -24,11 +31,7 @@ const drawing = (props) => {
   );
   return (
     <div id="container">
-      <img
-        className={style.join(" ")}
-        src={require("../../../" + props.path)}
-        alt={props.path}
-      />
+      <img className={style.join(" ")} src={imageUrl} alt={props.path} />
       {buttons}
     </div>
   );
