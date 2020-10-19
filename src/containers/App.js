@@ -13,6 +13,7 @@ class App extends Component {
     this.state = {
       data: [],
       isDataLoaded: false,
+      systems: [],
       input: "",
       selectedItem: {},
       imgRotation: 0,
@@ -26,26 +27,44 @@ class App extends Component {
       .then((response) => {
         return response.json();
       })
-      .then((data) => {
+      .then((fetchedData) => {
         this.setState({
-          data: data,
+          data: fetchedData,
           isDataLoaded: true,
         });
-        // console.log(this.state);
+      })
+      .catch((error) => {
+        console.error(error);
       });
   }
+  createSystemsArray = () => {
+    let temp = [];
+    let result = [];
+    this.state.data.forEach((element) => {
+      temp.push(element.index.slice(0, 3).replace(/[0-9]/g, ""));
+    });
+    for (const value of temp) {
+      if (
+        result.indexOf(value) === -1 &&
+        temp.filter((x) => x === value).length >= 10
+      ) {
+        result.push(value);
+      }
+    }
+    return result;
+  };
   inputChangeHandler = (event) => {
     this.setState({
       input: event.target.value.toUpperCase(),
     });
   };
   rotateImg = () => {
-    const currentRotation = this.state.imgRotation;
-    this.setState({ imgRotation: (currentRotation + 90) % 360 });
+    this.setState((prevState) => ({
+      imgRotation: (prevState.imgRotation + 90) % 360,
+    }));
   };
   flipImg = () => {
-    const currentFlip = this.state.imgFlip;
-    this.setState({ imgFlip: !currentFlip });
+    this.setState((prevState) => ({ imgFlip: !prevState.imgFlip }));
   };
   itemClickHandler = (item) => {
     this.setState({
@@ -60,6 +79,9 @@ class App extends Component {
     });
   };
   render() {
+    // console.log("aaaa test");
+    // let systemy = this.createSystemsArray();      elemnt do przekazania przy tworzeniu kafelków systemów
+    // console.log(systemy);
     let searchBar = (
       <SearchBar input={this.state.input} change={this.inputChangeHandler} />
     );
@@ -73,15 +95,9 @@ class App extends Component {
       view = (
         <div>
           <h1>Katalog profili</h1>
-          <p>dodanych elementów: {this.state.data.length}</p>
           {searchBar}
           <section id="info">
-            <p>Aby rozpocząć podaj indeks szukanego elementu.</p>
-            <p>
-              Jeżeli poszukiwanym elementem jest połowka np: <b>XIP010A</b>{" "}
-              nalezy podać indeks pełnego profilu tj. <b>IP010</b> lub np.{" "}
-              <b>IP030</b> a nastepnie sprawdzić oznaczenia połówek.
-            </p>
+            <p>Aby rozpocząć podaj fragment indeksu szukanego elementu.</p>
           </section>
         </div>
       );
@@ -90,7 +106,6 @@ class App extends Component {
       view = (
         <div>
           <h1>Katalog profili</h1>
-          <p>dostępne profile: {this.state.data.length}</p>
           {searchBar}
           <SearchList
             data={this.state.data}
