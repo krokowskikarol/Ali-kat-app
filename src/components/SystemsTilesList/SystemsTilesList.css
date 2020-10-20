@@ -1,0 +1,8 @@
+.SystemsTilesList {
+  /* border: 1px solid greenyellow; */
+  margin: auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

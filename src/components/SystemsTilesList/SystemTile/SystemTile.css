@@ -1,0 +1,9 @@
+.SystemTile {
+  width: 70px;
+  height: 70px;
+  font-size: large;
+  /* border: 1px solid orangered; */
+  background-color: #888;
+  border-radius: 10%;
+  margin-bottom: 2%;
+}

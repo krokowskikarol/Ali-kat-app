@@ -1,6 +1,6 @@
 .SearchList {
   width: 100%;
-  margin: auto;
+  margin: 20px auto;
 }
 @media (min-width: 801px) {
   .SearchList {

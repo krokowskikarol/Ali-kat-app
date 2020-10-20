@@ -2,13 +2,21 @@ import React from "react";
 import "./SearchBar.css";
 const searchBar = (props) => {
   return (
-    <input
-      className="SearchBar"
-      type="text"
-      onChange={props.change}
-      value={props.input}
-      placeholder="podaj index"
-    />
+    <div>
+      <input
+        className="SearchBar"
+        type="search"
+        list="data"
+        onChange={props.change}
+        value={props.input}
+        placeholder="podaj index"
+      />
+      <datalist id="data">
+        {props.systems.map((item, key) => (
+          <option key={key} value={item} />
+        ))}
+      </datalist>
+    </div>
   );
 };
 

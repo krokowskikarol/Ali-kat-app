@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import DetailCard from "../components/DetailCard/DetailCard";
 import SearchList from "../components/SearchList/SearchList";
 import SearchBar from "../components/SearchBar/SearchBar";
+// import SystemsTilesList from "../components/SystemsTilesList/SystemsTilesList";
 
 //import Data from "./data.json";
 import "./App.css";
@@ -21,9 +22,9 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    fetch(
-      "https://raw.githubusercontent.com/krokowskikarol/appData/master/data.json"
-    )
+    const dataUrl =
+      "https://raw.githubusercontent.com/krokowskikarol/appData/master/data.json";
+    fetch(dataUrl)
       .then((response) => {
         return response.json();
       })
@@ -31,16 +32,17 @@ class App extends Component {
         this.setState({
           data: fetchedData,
           isDataLoaded: true,
+          systems: this.createSystemsArray(fetchedData),
         });
       })
       .catch((error) => {
         console.error(error);
       });
   }
-  createSystemsArray = () => {
+  createSystemsArray = (dataArray) => {
     let temp = [];
     let result = [];
-    this.state.data.forEach((element) => {
+    dataArray.forEach((element) => {
       temp.push(element.index.slice(0, 3).replace(/[0-9]/g, ""));
     });
     for (const value of temp) {
@@ -71,6 +73,11 @@ class App extends Component {
       selectedItem: item,
     });
   };
+  systemTileClickHandler = (systemName) => {
+    this.setState({
+      input: systemName,
+    });
+  };
   closeDetail = () => {
     this.setState({
       selectedItem: "",
@@ -79,11 +86,12 @@ class App extends Component {
     });
   };
   render() {
-    // console.log("aaaa test");
-    // let systemy = this.createSystemsArray();      elemnt do przekazania przy tworzeniu kafelków systemów
-    // console.log(systemy);
-    let searchBar = (
-      <SearchBar input={this.state.input} change={this.inputChangeHandler} />
+    const searchBar = (
+      <SearchBar
+        input={this.state.input}
+        systems={this.state.systems}
+        change={this.inputChangeHandler}
+      />
     );
     let view = (
       <div>
@@ -98,6 +106,10 @@ class App extends Component {
           {searchBar}
           <section id="info">
             <p>Aby rozpocząć podaj fragment indeksu szukanego elementu.</p>
+            {/* <SystemsTilesList
+              systems={this.state.systems}
+              clicked={this.systemTileClickHandler}
+            /> */}
           </section>
         </div>
       );

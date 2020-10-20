@@ -1,25 +1,27 @@
-.Drawing {
-  width: 100%;
-  padding-top: 10px;
-
-  margin: 0 auto 10px auto;
-}
 #container {
+  /* border: 3px solid orangered; */
+  position: relative;
+  width: 100%;
 }
 #buttons {
   opacity: 0.75;
   position: absolute;
-  display: block;
-  top: 0px;
+  display: flex;
+  bottom: 5px;
+  right: 0px;
   background-color: rgba(153, 153, 153, 0.5);
 }
-.buttons {
+.button {
   height: 30px;
   width: 30px;
-  margin: auto;
   padding: 10px;
 }
-.buttons:hover {
+#buttonFlip:hover {
+  background-color: #aaa;
+  width: 35px;
+  height: 35px;
+}
+#buttonRot:hover {
   background-color: #aaa;
   width: 35px;
   height: 35px;

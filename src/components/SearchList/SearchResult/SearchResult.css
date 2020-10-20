@@ -1,19 +1,16 @@
 .SearchResult {
-  width: 60%;
+  width: 80%;
   height: 100px;
-  margin: 20px auto;
+  margin: 5px auto;
   line-height: 100px;
   display: flex;
-  padding: 10px 0px;
   background-color: #888;
-  border-radius: 20px;
-  box-shadow: #555 2px 3px;
+  border-radius: 10px;
 }
 .SearchResult .image {
-  height: 100px;
+  height: auto;
   width: 100px;
-  margin: 0 auto 0 10px;
-  border-radius: 20px;
+  border-radius: 10px;
   pointer-events: none;
 }
 .SearchResult h2 {
@@ -21,7 +18,7 @@
   color: #eee;
 }
 .SearchResult:hover {
-  width: 65%;
+  width: 85%;
   height: 110px;
   background-color: #999;
 }

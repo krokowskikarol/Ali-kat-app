@@ -1,14 +1,16 @@
 .DetailCard {
+  position: relative;
   margin: auto;
-  height: 100vh; /*height: 15CM*/
-  width: 90vw;
+  width: 98%;
   display: block; /*docelowo "block" */
   background-color: #333;
 }
 .DetailCard * {
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .DetailCard .header {
+  position: fixed;
+  width: inherit;
   display: flex;
   background-color: #777;
 }
@@ -18,7 +20,6 @@
 }
 .closeButton {
   width: 82px;
-  margin: auto 0px auto auto;
   background-color: #ccc;
 }
 

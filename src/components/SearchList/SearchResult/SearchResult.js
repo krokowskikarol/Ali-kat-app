@@ -9,7 +9,7 @@ const searchResult = (props) => {
 
   return (
     <div className="SearchResult" onClick={props.clicked}>
-      <img className="image" src={imageUrl} alt="x" />
+      <img className="image" src={imageUrl} alt={props.index} />
       <h2> {props.index}</h2>
     </div>
   );

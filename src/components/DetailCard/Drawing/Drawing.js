@@ -20,12 +20,11 @@ const drawing = (props) => {
     ".png";
   const buttons = (
     <div id="buttons">
-      <div className="buttons" onClick={props.flipImg}>
-        <img src={flipIcon} alt="flip" />
-      </div>
-
-      <div className="buttons" onClick={props.rotateImg}>
+      <div id="buttonRot" className="button" onClick={props.rotateImg}>
         <img src={rotateIcon} alt="rotate" />
+      </div>
+      <div id="buttonFlip" className="button" onClick={props.flipImg}>
+        <img src={flipIcon} alt="flip" />
       </div>
     </div>
   );
