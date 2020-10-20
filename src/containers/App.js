@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import DetailCard from "../components/DetailCard/DetailCard";
 import SearchList from "../components/SearchList/SearchList";
 import SearchBar from "../components/SearchBar/SearchBar";
-// import SystemsTilesList from "../components/SystemsTilesList/SystemsTilesList";
+import SystemsTilesList from "../components/SystemsTilesList/SystemsTilesList";
 
 //import Data from "./data.json";
 import "./App.css";
@@ -106,10 +106,10 @@ class App extends Component {
           {searchBar}
           <section id="info">
             <p>Aby rozpocząć podaj fragment indeksu szukanego elementu.</p>
-            {/* <SystemsTilesList
+            <SystemsTilesList
               systems={this.state.systems}
               clicked={this.systemTileClickHandler}
-            /> */}
+            />
           </section>
         </div>
       );
