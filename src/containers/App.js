@@ -53,6 +53,7 @@ class App extends Component {
         result.push(value);
       }
     }
+    result[result.indexOf("P")] = "P47";
     return result;
   };
   inputChangeHandler = (event) => {
@@ -139,7 +140,7 @@ class App extends Component {
         />
       );
     }
-    //console.log(this.state); // for debuging purposes
+    console.log(this.state); // for debuging purposes
 
     return <div className="App">{view}</div>;
   }

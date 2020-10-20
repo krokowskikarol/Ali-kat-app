@@ -6,17 +6,17 @@ const searchBar = (props) => {
       <input
         className="SearchBar"
         type="search"
-        list="data"
+        // list="data"
         onChange={props.change}
         value={props.input}
         placeholder="podaj index"
         autoFocus
       />
-      <datalist id="data">
+      {/* <datalist id="data">
         {props.systems.map((item, key) => (
           <option key={key} value={item} />
         ))}
-      </datalist>
+      </datalist> */}
     </div>
   );
 };
