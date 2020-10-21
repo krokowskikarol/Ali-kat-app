@@ -86,12 +86,18 @@ class App extends Component {
       imgFlip: false,
     });
   };
+  clearSearchBarInput = () => {
+    this.setState({
+      input: "",
+    });
+  };
   render() {
     const searchBar = (
       <SearchBar
         input={this.state.input}
         systems={this.state.systems}
         change={this.inputChangeHandler}
+        clearInput={this.clearSearchBarInput}
       />
     );
     let view = (

@@ -1,14 +1,38 @@
 .SearchBar {
+  width: 80%;
+  height: 55px;
+  margin: auto;
+  display: flex;
+  position: relative;
+}
+.SearchBar .input {
   font-size: 2.5em;
   text-align: center;
-  width: 80%;
+  width: 100%;
   background-color: #ddd;
   border-radius: 10px;
 }
-.SearchBar:focus {
+.SearchBar .input:focus {
   outline: none;
 }
+.SearchBar .clearButton {
+  /*poprawic po dodaniu ikony */
+  background-color: darkslategray;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 30px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  font-size: 4em;
+  color: #ddd;
+}
+
 @media (min-width: 801px) {
+  .SearchBar .input {
+    width: 100%;
+  }
   .SearchBar {
     width: 40%;
   }
