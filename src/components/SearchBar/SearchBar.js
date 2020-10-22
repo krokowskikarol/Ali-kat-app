@@ -12,10 +12,12 @@ const searchBar = (props) => {
         placeholder="podaj index"
         autoFocus
       />
-      <div className="clearButton" onClick={props.clearInput}>
-        x
-      </div>
-      {/*zamiast x dodać jakaś ikonę*/}
+      {/* display clearButton only if there is something to clear in input field */}
+      {props.input !== "" ? (
+        <div className="clearButton" onClick={props.clearInput}>
+          x
+        </div>
+      ) : null}
       {/* <datalist id="data">
         {props.systems.map((item, key) => (
           <option key={key} value={item} />

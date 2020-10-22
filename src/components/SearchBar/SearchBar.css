@@ -22,11 +22,11 @@
   border-bottom-right-radius: 10px;
   width: 55px;
   height: 55px;
-  line-height: 60%;
+  line-height: 45px;
   position: absolute;
   right: 0px;
   top: 0;
-  font-size: 4em;
+  font-size: 3em;
   color: #ddd;
 }
 
