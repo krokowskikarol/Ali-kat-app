@@ -12,6 +12,7 @@ body {
 }
 .App footer {
   margin-top: 20px;
+  margin-bottom: 10px;
   color: #777;
 }
 @media (min-width: 801px) {
