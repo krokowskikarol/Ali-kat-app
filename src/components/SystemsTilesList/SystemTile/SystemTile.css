@@ -1,7 +1,8 @@
 .SystemTile {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   font-size: large;
+  line-height: 50%;
   /* border: 1px solid orangered; */
   background-color: #888;
   border-radius: 10%;
