@@ -15,7 +15,7 @@ const searchBar = (props) => {
       {/* display clearButton only if there is something to clear in input field */}
       {props.input !== "" ? (
         <div className="clearButton" onClick={props.clearInput}>
-          x
+          <div className="arrowPointLeft"></div>x
         </div>
       ) : null}
       {/* <datalist id="data">

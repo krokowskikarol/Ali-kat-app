@@ -5,13 +5,17 @@ body {
   color: #eee;
   text-align: center;
 }
-#info {
+.App #info {
   width: 80%;
   margin: auto;
-  font-size: 2em;
+  font-size: 1.5em;
+}
+.App footer {
+  margin-top: 20px;
+  color: #777;
 }
 @media (min-width: 801px) {
-  #info {
+  .App #info {
     width: 40%;
   }
 }

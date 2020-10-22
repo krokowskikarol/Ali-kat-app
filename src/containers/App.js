@@ -112,12 +112,16 @@ class App extends Component {
           <h1>Katalog profili</h1>
           {searchBar}
           <section id="info">
-            <p>Aby rozpocząć podaj fragment indeksu szukanego elementu.</p>
+            <p>
+              Aby rozpocząć podaj fragment indeksu szukanego elementu, lub
+              wybierz system z poniższych:
+            </p>
             <SystemsTilesList
               systems={this.state.systems}
               clicked={this.systemTileClickHandler}
             />
           </section>
+          <footer>Made by Karol Krokowski</footer>
         </div>
       );
     }
