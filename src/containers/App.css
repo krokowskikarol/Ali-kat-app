@@ -1,8 +1,16 @@
+:root {
+  --textColor: #ddd;
+  --hoverBackground: #777;
+  --backgroundColor: #888;
+  --baseBackgroundcolor: #333;
+  --redCancel: red;
+}
+
 body {
-  background-color: #333;
+  background-color: var(--baseBackgroundcolor);
 }
 .App {
-  color: #eee;
+  color: var(--textColor);
   text-align: center;
 }
 .App #info {
@@ -13,7 +21,7 @@ body {
 .App footer {
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #777;
+  color: var(--hoverBackground);
 }
 @media (min-width: 801px) {
   .App #info {

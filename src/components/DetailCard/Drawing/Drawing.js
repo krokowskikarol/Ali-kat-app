@@ -19,7 +19,7 @@ const drawing = (props) => {
     props.index +
     ".png";
   const buttons = (
-    <div id="buttons">
+    <div className="buttons">
       <div id="buttonRot" className="button" onClick={props.rotateImg}>
         <img src={rotateIcon} alt="rotate" />
       </div>
@@ -29,7 +29,7 @@ const drawing = (props) => {
     </div>
   );
   return (
-    <div id="container">
+    <div className="Draving">
       <img className={style.join(" ")} src={imageUrl} alt={props.path} />
       {buttons}
     </div>

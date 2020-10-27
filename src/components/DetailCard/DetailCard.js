@@ -2,7 +2,7 @@ import React from "react";
 import Drawing from "./Drawing/Drawing";
 // import FeatureList from "./FeatureList/FeatureList";
 import "./DetailCard.css";
-import backIcon from "./arrow_back_icon.png";
+import backIcon from "./arrow-back.svg";
 
 const detailCard = (props) => {
   return (
@@ -19,12 +19,13 @@ const detailCard = (props) => {
         <div className="name">
           <b>{props.item.index}</b>
         </div>
-        <img
-          className="closeButton"
-          onClick={props.close}
+        <div className="closeButton"
+          onClick={props.close}><img
+          
           src={backIcon}
           alt="Back"
-        />
+        /></div>
+        
       </div>
 
       {/* <FeatureList features={["zagniatanie", "przekładki"]} />   */}
