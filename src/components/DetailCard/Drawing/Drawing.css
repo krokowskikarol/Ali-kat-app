@@ -6,15 +6,17 @@
   opacity: 0.75;
   position: absolute;
   display: flex;
-  bottom: 0px;
+  top: 0px;
   right: 0px;
-  background-color: rgba(153, 153, 153, 0.5);
-  border-radius: 10px 0 0 0;
+  /* 
+  border-radius: 10px 0 0 0; */
 }
 .button {
   height: 30px;
   width: 30px;
   padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(153, 153, 153, 0.5);
 }
 #buttonFlip:hover,
 #buttonRot:hover {
@@ -24,7 +26,7 @@
   border-radius: 10px;
 }
 .image {
-  margin-bottom: -4px;
+  margin-bottom: -5px;
   width: 100%;
   pointer-events: none;
   border-radius: 10px 10px 0 0;
@@ -48,10 +50,13 @@
 }
 .flipped90 {
   transform: rotate(270deg) scale(1, -1);
+  border-radius: 0 10px 10px 0;
 }
 .flipped180 {
   transform: scale(1, -1);
+  border-radius: 0 0 10px 10px;
 }
 .flipped270 {
   transform: rotate(-270deg) scale(1, -1);
+  border-radius: 10px 0 0 10px;
 }

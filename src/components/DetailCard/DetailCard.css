@@ -19,11 +19,14 @@
 }
 .DetailCard .header .closeButton {
   width: 100px;
-  background-color: #ddd;
+  background-color: #bbb;
   border-radius: 0 0 10px 0;
 }
 .DetailCard .header .closeButton img {
   width: 70px;
+  /* oh man... just experiment with that */
+  filter: invert(27%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(100%)
+    contrast(50%);
 }
 @media (min-width: 801px) {
   .DetailCard {

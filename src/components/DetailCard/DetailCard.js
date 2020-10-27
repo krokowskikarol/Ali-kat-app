@@ -20,8 +20,8 @@ const detailCard = (props) => {
           <b>{props.item.index}</b>
         </div>
         <div className="closeButton"
-          onClick={props.close}><img
-          
+          onClick={props.close}>
+          <img
           src={backIcon}
           alt="Back"
         /></div>
