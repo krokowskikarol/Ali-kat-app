@@ -8,7 +8,7 @@
   border-radius: 10px;
 }
 .SearchResult .image {
-  height: auto;
+  height: inherit;
   width: 100px;
   border-radius: 10px;
   pointer-events: none;
