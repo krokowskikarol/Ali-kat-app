@@ -10,16 +10,16 @@
   width: inherit;
   height: 4.5rem;
   display: flex;
-  background-color: var(--backgroundColor);
+  background-color: var(--background-color);
   border-radius: 0 0 10px 10px;
 }
 .DetailCard .header .name {
   margin: auto;
-  font-size: 3em;
+  font-size: 3rem;
 }
 .DetailCard .header .closeButton {
   width: 100px;
-  background-color: #bbb;
+  background-color: var(--button-color);
   border-radius: 0 0 10px 0;
 }
 .DetailCard .header .closeButton img {
@@ -34,5 +34,5 @@
   }
 }
 .DetailCard .header .closeButton:hover {
-  background-color: #eee;
+  background-color: var(--red-cancel);
 }

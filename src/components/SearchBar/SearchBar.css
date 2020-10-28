@@ -9,7 +9,8 @@
   font-size: 2.5em;
   text-align: center;
   width: 100%;
-  background-color: var(--textColor);
+  background-color: var(--text-color);
+  color: var(--background-body-color);
   border-radius: 10px;
   border: none;
 }
@@ -18,7 +19,7 @@
 }
 .SearchBar .clearButton {
   cursor: pointer;
-  background-color: var(--backgroundColor);
+  background-color: var(--background-color);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   width: 55px;
@@ -28,12 +29,11 @@
   right: 0;
   top: 0;
   font-size: 3em;
-  color: var(-textColor);
 }
 /* arrow part of the clearButton */
 .SearchBar .clearButton .arrowPointLeft {
   position: absolute;
-  border-color: transparent var(--backgroundColor);
+  border-color: transparent var(--background-color);
   border-style: solid;
   border-width: 28px 27px 27px 0px;
   right: 100%;
@@ -41,10 +41,10 @@
   width: 0px;
 }
 .SearchBar .clearButton:hover {
-  background-color: var(--redCancel);
+  background-color: var(--red-cancel);
 }
 .SearchBar .clearButton:hover .arrowPointLeft {
-  border-color: transparent var(--redCancel);
+  border-color: transparent var(--red-cancel);
 }
 
 @media (min-width: 801px) {

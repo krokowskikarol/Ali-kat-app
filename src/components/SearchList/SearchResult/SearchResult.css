@@ -4,7 +4,7 @@
   margin: 5px auto;
   line-height: 100px;
   display: flex;
-  background-color: var(--backgroundColor);
+  background-color: var(--background-color);
   border-radius: 10px;
 }
 .SearchResult .image {
@@ -15,10 +15,10 @@
 }
 .SearchResult h2 {
   margin: 0 40px 0 auto;
-  color: var(--textColor);
+  color: var(--text-color);
 }
 .SearchResult:hover {
   width: 85%;
   height: 110px;
-  background-color: #999;
+  background-color: var(--background-hover-color);
 }

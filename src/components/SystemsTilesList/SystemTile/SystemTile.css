@@ -2,11 +2,11 @@
   width: 70px;
   height: 70px;
   font-size: large;
-  line-height: 50%;
-  background-color: var(--backgroundColor);
+  line-height: 30px;
+  background-color: var(--background-color);
   border-radius: 10%;
   margin-bottom: 2%;
 }
 .SystemTile:hover {
-  background-color: var(--hoverBackground);
+  background-color: var(--background-hover-color);
 }
