@@ -116,7 +116,7 @@ class App extends Component {
               Aby rozpocząć podaj fragment indeksu szukanego elementu, lub
               wybierz system z poniższych:
             </p>
-            <SystemsTilesList
+            <SystemsTilesList 
               systems={this.state.systems}
               clicked={this.systemTileClickHandler}
             />
