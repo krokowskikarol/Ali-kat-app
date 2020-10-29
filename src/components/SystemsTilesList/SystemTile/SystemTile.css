@@ -1,6 +1,7 @@
 .SystemTile {
   width: 70px;
   height: 70px;
+  color: var(--text-color);
   font-size: large;
   line-height: 30px;
   background-color: var(--background-color);

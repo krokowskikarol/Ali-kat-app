@@ -113,7 +113,7 @@ class App extends Component {
           {searchBar}
           <section id="info">
             <p>
-              Aby rozpocząć podaj fragment indeksu szukanego elementu, lub
+              Aby rozpocząć podaj fragment indeksu szukanego elementu lub
               wybierz system z poniższych:
             </p>
             <SystemsTilesList 
