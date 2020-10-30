@@ -3,10 +3,11 @@
   margin: 20px auto;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 @media (min-width: 801px) {
   .SearchList {
-    width: 40%;
+    width: 80%;
   }
 }

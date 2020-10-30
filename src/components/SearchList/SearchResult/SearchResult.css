@@ -20,12 +20,11 @@
 /*tiles display*/
 .SearchResult {
   position: relative;
-
-  width: 20vw;
+  width: 100px;
   height: 120px;
   margin: 5px 5px;
-  /* line-height: 100px; */
   background-color: var(--background-color);
+  box-shadow: -5px 5px 10px var(--shadow-color);
   border-radius: 10px;
 }
 .SearchResult .image {
@@ -38,7 +37,7 @@
   /* position: absolute;
   top: 80px; */
   margin-top: -3px;
-  font-size: 3.5vw;
+  font-size: 20px;
   z-index: 2;
   color: var(--text-color);
 }

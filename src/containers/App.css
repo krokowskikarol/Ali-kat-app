@@ -31,6 +31,7 @@
   --background-body-color: rgba(155, 18, 27, 0.95);
   --button-color: #666;
   --red-cancel: red;
+  --shadow-color: rgba(8, 5, 5, 0.7);
 }
 
 body {

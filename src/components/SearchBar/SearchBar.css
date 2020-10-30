@@ -4,6 +4,7 @@
   margin: auto;
   display: flex;
   position: relative;
+  box-shadow: -5px 5px 10px var(--shadow-color);
 }
 .SearchBar .input {
   font-size: 2.5em;
@@ -26,6 +27,8 @@
   cursor: pointer;
   color: var(--text-color);
   background-color: var(--background-color);
+  box-shadow: -5px 0px 35px var(--shadow-color);
+
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   width: 55px;
