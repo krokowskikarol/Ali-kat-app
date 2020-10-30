@@ -10,7 +10,7 @@
   --button-color: #ddd;
   --red-cancel: red; */
 
-  --text-color: #eee;
+  /* --text-color: #eee;
   --body-text-color: #ddd;
   --input-text-color: #444;
   --input-background-color: #ddd;
@@ -19,6 +19,17 @@
   --background-hover-color: #bbb;
   --background-body-color: rgba(155, 18, 27, 0.95);
   --button-color: #ddd;
+  --red-cancel: red; */
+
+  --text-color: #444;
+  --body-text-color: #ddd;
+  --input-text-color: #444;
+  --input-background-color: #eee;
+  --footer-color: #aaa;
+  --background-color: #eee;
+  --background-hover-color: #bbb;
+  --background-body-color: rgba(155, 18, 27, 0.95);
+  --button-color: #666;
   --red-cancel: red;
 }
 
