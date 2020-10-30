@@ -1,6 +1,7 @@
 .SearchBar {
   width: 80%;
   height: 55px;
+  border-radius: 10px;
   margin: auto;
   display: flex;
   position: relative;
@@ -12,7 +13,7 @@
   width: 100%;
   background-color: var(--input-background-color);
   color: var(--input-text-color);
-  border-radius: 10px;
+  border-radius: inherit;
   border: none;
 }
 ::placeholder {
