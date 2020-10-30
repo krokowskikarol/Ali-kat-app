@@ -20,11 +20,11 @@
 /*tiles display*/
 .SearchResult {
   position: relative;
-  width: 100px;
+  width: 20vw;
   height: 120px;
   margin: 5px auto;
   /* line-height: 100px; */
-  display: flex;
+
   background-color: var(--background-color);
   border-radius: 10px;
 }
@@ -36,8 +36,8 @@
 }
 .SearchResult h2 {
   position: absolute;
-  top: 70px;
-
+  top: 80px;
+  font-size: 3.5vw;
   z-index: 2;
   color: var(--text-color);
 }
@@ -50,4 +50,11 @@
   width: 110px;
   height: 133px;
   background-color: var(--background-hover-color);
+}
+.SearchResult:hover .image {
+  width: 110px;
+  height: 110px;
+}
+.SearchResult:hover h2 {
+  top: 95px;
 }
