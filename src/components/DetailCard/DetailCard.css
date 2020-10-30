@@ -1,7 +1,7 @@
 .DetailCard {
   position: relative;
   margin: auto;
-  width: 98%;
+  width: 100%;
   display: block; /*docelowo "block" */
 }
 
