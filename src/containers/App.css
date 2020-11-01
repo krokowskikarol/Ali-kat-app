@@ -32,6 +32,8 @@
   --button-color: #666;
   --red-cancel: red;
   --shadow-color: rgba(8, 5, 5, 0.7);
+  --change-item-hover: rgba(53, 53, 53, 0.5);
+  --change-item-color: rgba(92, 92, 92, 0.5);
 }
 
 body {

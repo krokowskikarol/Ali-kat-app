@@ -2,7 +2,41 @@
   position: relative;
   width: 100%;
 }
-.buttons {
+.Drawing .changeItem {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+.Drawing .changeItem .prev,
+.next {
+  margin: 15% 0;
+  width: 25%;
+  height: 80%;
+}
+.Drawing .changeItem .prev svg {
+  fill: var(--change-item-color);
+  transform: rotate(180deg);
+  margin: 100% 50% auto 0px;
+}
+.Drawing .changeItem .separator {
+  width: 50%;
+}
+
+.Drawing .changeItem .next svg {
+  fill: var(--change-item-color);
+  margin: 100% 0px auto 50%;
+}
+.Drawing .changeItem .prev:hover svg {
+  fill: var(--change-item-hover);
+}
+.Drawing .changeItem .next:hover svg {
+  fill: var(--change-item-hover);
+}
+.Drawing .buttons {
+  z-index: 2;
   opacity: 0.75;
   position: absolute;
   display: flex;
@@ -11,21 +45,22 @@
   /* 
   border-radius: 10px 0 0 0; */
 }
-.button {
+.Drawing .button {
   height: 30px;
   width: 30px;
   padding: 10px;
   border-radius: 10px;
   background-color: rgba(153, 153, 153, 0.5);
 }
-#buttonFlip:hover,
+.Drawing #buttonFlip:hover,
 #buttonRot:hover {
   background-color: #aaa;
   width: 35px;
   height: 35px;
   border-radius: 10px;
 }
-.image {
+
+.Drawing .image {
   margin-bottom: -5px;
   width: 100%;
   pointer-events: none;

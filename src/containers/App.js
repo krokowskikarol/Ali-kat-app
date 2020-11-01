@@ -15,6 +15,7 @@ class App extends Component {
       data: [],
       isDataLoaded: false,
       systems: [],
+      searchList: [],
       input: "",
       selectedItem: {},
       imgRotation: 0,
@@ -56,9 +57,17 @@ class App extends Component {
     result[result.indexOf("P")] = "P47";
     return result;
   };
+  createSearchList = (inputValue) => {
+    const itemList = this.state.data.filter((item) => {
+      return item.index.includes(inputValue);
+    });
+    return itemList;
+  };
   inputChangeHandler = (event) => {
+    const inputValue = event.target.value.toUpperCase();
     this.setState({
-      input: event.target.value.toUpperCase(),
+      input: inputValue,
+      searchList: this.createSearchList(inputValue),
     });
   };
   rotateImg = () => {
@@ -74,9 +83,30 @@ class App extends Component {
       selectedItem: item,
     });
   };
+  nextItemClickHandler = () => {
+    let next = this.state.searchList.indexOf(this.state.selectedItem) + 1;
+
+    if (next === this.state.searchList.length) {
+      next = 0;
+    }
+    this.setState({
+      selectedItem: this.state.searchList[next],
+    });
+  };
+  prevItemClickHandler = () => {
+    let prev = this.state.searchList.indexOf(this.state.selectedItem) - 1;
+
+    if (prev < 0) {
+      prev = this.state.searchList.length - 1;
+    }
+    this.setState({
+      selectedItem: this.state.searchList[prev],
+    });
+  };
   systemTileClickHandler = (systemName) => {
     this.setState({
       input: systemName,
+      searchList: this.createSearchList(systemName),
     });
   };
   closeDetail = () => {
@@ -116,7 +146,7 @@ class App extends Component {
               Aby rozpocząć podaj fragment indeksu szukanego elementu lub
               wybierz system z poniższych:
             </p>
-            <SystemsTilesList 
+            <SystemsTilesList
               systems={this.state.systems}
               clicked={this.systemTileClickHandler}
             />
@@ -131,8 +161,7 @@ class App extends Component {
           <h1>Katalog profili</h1>
           {searchBar}
           <SearchList
-            data={this.state.data}
-            input={this.state.input}
+            searchList={this.state.searchList}
             clicked={this.itemClickHandler}
           />
         </div>
@@ -147,6 +176,8 @@ class App extends Component {
           flipImg={this.flipImg}
           rotateImg={this.rotateImg}
           close={this.closeDetail}
+          nextItem={this.nextItemClickHandler}
+          prevItem={this.prevItemClickHandler}
         />
       );
     }

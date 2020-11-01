@@ -29,8 +29,41 @@ const drawing = (props) => {
     </div>
   );
   return (
-    <div className="Draving">
+    <div className="Drawing">
       <img className={style.join(" ")} src={imageUrl} alt={props.path} />
+
+      <div className="changeItem">
+        <div className="prev" onClick={props.prev}>
+          <svg
+            className="arrow prevArrow"
+            version="1.1"
+            viewBox="0 0 494.148 494.148"
+            fill="#ffffff"
+          >
+            <title>arrow-left</title>
+            <path
+              d="M405.284,201.188L130.804,13.28C118.128,4.596,105.356,0,94.74,0C74.216,0,61.52,16.472,61.52,44.044v406.124
+			c0,27.54,12.68,43.98,33.156,43.98c10.632,0,23.2-4.6,35.904-13.308l274.608-187.904c17.66-12.104,27.44-28.392,27.44-45.884
+			C432.632,229.572,422.964,213.288,405.284,201.188z"
+            />
+          </svg>
+        </div>
+        <div className="separator"></div>
+        <div className="next" onClick={props.next}>
+          <svg
+            className="arrow nextArrow"
+            version="1.1"
+            viewBox="0 0 494.148 494.148"
+          >
+            <title>arrow-right</title>
+            <path
+              d="M405.284,201.188L130.804,13.28C118.128,4.596,105.356,0,94.74,0C74.216,0,61.52,16.472,61.52,44.044v406.124
+			c0,27.54,12.68,43.98,33.156,43.98c10.632,0,23.2-4.6,35.904-13.308l274.608-187.904c17.66-12.104,27.44-28.392,27.44-45.884
+			C432.632,229.572,422.964,213.288,405.284,201.188z"
+            />
+          </svg>
+        </div>
+      </div>
       {buttons}
     </div>
   );

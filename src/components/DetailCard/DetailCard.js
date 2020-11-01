@@ -12,6 +12,8 @@ const detailCard = (props) => {
         flipImg={props.flipImg}
         flipped={props.flipped}
         index={props.item.index}
+        next={props.nextItem}
+        prev={props.prevItem}
       />
 
       <div className="header">
