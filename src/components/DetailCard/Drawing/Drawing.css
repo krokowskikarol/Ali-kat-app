@@ -29,7 +29,8 @@
   fill: var(--change-item-color);
   margin: 100% 0px auto 50%;
 }
-.Drawing .changeItem .prev:hover svg {
+.Drawing .changeItem .prev:hover svg,
+.next:hover svg {
   fill: var(--change-item-hover);
 }
 .Drawing .changeItem .next:hover svg {
