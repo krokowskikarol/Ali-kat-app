@@ -1,7 +1,6 @@
 import React from "react";
 import "./SearchResult.css";
 const searchResult = (props) => {
-  //const url = require("../../../../../katImages/150/" + props.index + ".jpg");// for local images
   let imageUrl =
     "https://raw.githubusercontent.com/krokowskikarol/appData/master/katImages/150/" +
     props.index +

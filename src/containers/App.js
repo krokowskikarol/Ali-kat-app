@@ -3,8 +3,6 @@ import DetailCard from "../components/DetailCard/DetailCard";
 import SearchList from "../components/SearchList/SearchList";
 import SearchBar from "../components/SearchBar/SearchBar";
 import SystemsTilesList from "../components/SystemsTilesList/SystemsTilesList";
-
-//import Data from "./data.json";
 import "./App.css";
 
 class App extends Component {
@@ -22,6 +20,7 @@ class App extends Component {
       imgFlip: false,
     };
   }
+  //loading data
   componentDidMount() {
     const dataUrl =
       "https://raw.githubusercontent.com/krokowskikarol/appData/master/data.json";
@@ -40,6 +39,7 @@ class App extends Component {
         console.error(error);
       });
   }
+  //create systems array list for state.systems, first step is slice index to its first 3 signs and the eliminate any number  left in those 3 signs
   createSystemsArray = (dataArray) => {
     let temp = [];
     let result = [];
@@ -54,6 +54,7 @@ class App extends Component {
         result.push(value);
       }
     }
+    //manualy overides P to P47 for separators(przekładki)
     result[result.indexOf("P")] = "P47";
     return result;
   };

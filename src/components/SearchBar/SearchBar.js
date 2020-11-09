@@ -6,7 +6,6 @@ const searchBar = (props) => {
       <input
         className="input"
         type="text"
-        // list="data"
         onChange={props.change}
         value={props.input}
         placeholder="podaj index"
@@ -18,11 +17,6 @@ const searchBar = (props) => {
           <div className="arrowPointLeft"></div>x
         </div>
       ) : null}
-      {/* <datalist id="data">
-        {props.systems.map((item, key) => (
-          <option key={key} value={item} />
-        ))}
-      </datalist> */}
     </div>
   );
 };
