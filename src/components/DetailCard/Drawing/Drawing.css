@@ -99,3 +99,6 @@
   transform: rotate(-270deg) scale(1, -1);
   border-radius: 10px 0 0 10px;
 }
+
+@media (min-width: 801px) {
+}

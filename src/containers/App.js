@@ -8,7 +8,7 @@ import "./App.css";
 class App extends Component {
   constructor(props) {
     super(props);
-    console.log("data is loaded");
+    // console.log("data is loaded");
     this.state = {
       data: [],
       isDataLoaded: false,
@@ -54,7 +54,7 @@ class App extends Component {
         result.push(value);
       }
     }
-    //manualy overides P to P47 for separators(przekładki)
+    //manualy overides P to P47 for spacers
     result[result.indexOf("P")] = "P47";
     return result;
   };
@@ -182,7 +182,7 @@ class App extends Component {
         />
       );
     }
-    console.log(this.state); // for debuging purposes
+    //console.log(this.state); // for debuging purposes
 
     return <div className="App">{view}</div>;
   }
