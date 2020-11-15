@@ -29,7 +29,6 @@
   color: var(--text-color);
   background-color: var(--background-color);
   box-shadow: -5px 0px 35px var(--shadow-color);
-
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   width: 55px;
@@ -52,9 +51,11 @@
 }
 .SearchBar .clearButton:hover {
   background-color: var(--red-cancel);
+  transition: 500ms;
 }
 .SearchBar .clearButton:hover .arrowPointLeft {
   border-color: transparent var(--red-cancel);
+  transition: 500ms;
 }
 
 @media (min-width: 801px) {
